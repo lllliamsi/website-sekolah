@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sekolah Komunitas Kebon Maen</title>
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f6f7;
+        padding-top: 70px;
+      }
+      .navbar,
+      .footer {
+        background: linear-gradient(to right, #56a630, #a6c957);
+      }
+      .navbar-brand,
+      .nav-link,
+      .footer-text {
+        color: #fff;
+      }
+      .dropdown-menu {
+        background: linear-gradient(to right, #56a630, #a6c957);
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .dropdown-item {
+        color: #fff;
+      }
+      .dropdown-item:hover {
+        background-color: #4c922b;
+        color: #fff;
+      }
+      .jumbotron {
+        height: 600px;
+        padding: 0;
+      }
+      .jumbotron .carousel-item img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+      }
+      .jumbotron .carousel-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: auto;
+        text-align: center;
+      }
+      .jumbotron .carousel-caption h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .jumbotron .carousel-caption p {
+        font-size: 2rem;
+        margin: 1rem 0;
+        font-weight: bold;
+      }
+      .jumbotron .carousel-caption a {
+        font-size: 1.25rem;
+      }
+      .jumbotron .btn {
+        background: linear-gradient(to right, #56a630, #a6c957);
+        border-color: #56a630;
+        color: #fff;
+      }
+      .jumbotron .btn:hover {
+        background: linear-gradient(to right, #4c922b, #8fb64d);
+        border-color: #4c922b;
+      }
+      .footer-text,
+      .footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+      .card-title {
+        font-weight: 600;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: #8fb64d;
+      }
+      .carousel-control-prev-icon:hover,
+      .carousel-control-next-icon:hover {
+        background-color: #a6c957;
+      }
+      .social-icon {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin: 0 10px;
+        transition: color 0.3s;
+      }
+      .social-icon:hover {
+        color: #4c922b;
+      }
+      .custom-card {
+        background-color: transparent;
+        border: none;
+      }
+      .card-body .btn {
+        background: linear-gradient(to right, #56a630, #a6c957);
+        border-color: #56a630;
+        color: #fff;
+      }
+      .card-body .btn:hover {
+        background: linear-gradient(to right, #4c922b, #8fb64d);
+        border-color: #4c922b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.png" alt="Logo" width="100" class="d-inline-block align-text-center" />
+          Sekolah Komunitas Kebon Maen
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Profil </a>
+              <ul class="dropdown-menu" aria-labelledby="profilDropdown">
+                <li><a class="dropdown-item" href="kb.html">KB/TK Kebon Maen</a></li>
+                <li><a class="dropdown-item" href="sd.html">SD Kebon Maen</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#jenjang">Pendaftaran</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="program.html">Program</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div id="jumbotronCarousel" class="carousel slide jumbotron" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/images/camping keluarga 2018.jpeg" class="d-block w-100" alt="Slide 1" />
+          <div class="carousel-caption">
+            <h1 class="carousel-title">Sekolah Komunitas Kebon Maen</h1>
+            <a class="btn btn-primary btn-lg" href="#jenjang" role="button">Daftar Sekarang</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/pekan-pertama.jpg" class="d-block w-100" alt="Slide 2" />
+          <div class="carousel-caption">
+            <h1 class="carousel-title d-none d-md-block">Sekolah Komunitas Kebon Maen</h1>
+            <p class="lead">Belajar Menyenangkan</p>
+            <a class="btn btn-primary btn-lg" href="#jenjang" role="button">Daftar Sekarang</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/tup-2021.jpg" class="d-block w-100" alt="Slide 3" />
+          <div class="carousel-caption">
+            <h1 class="carousel-title d-none d-md-block">Sekolah Komunitas Kebon Maen</h1>
+            <p class="lead">Bermakna</p>
+            <a class="btn btn-primary btn-lg" href="#jenjang" role="button">Daftar Sekarang</a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/images/service-learning-2022.jpg" class="d-block w-100" alt="Slide 3" />
+          <div class="carousel-caption">
+            <h1 class="carousel-title d-none d-md-block">Sekolah Komunitas Kebon Maen</h1>
+            <p class="lead">Relevan</p>
+            <a class="btn btn-primary btn-lg" href="#jenjang" role="button">Daftar Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#jumbotronCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#jumbotronCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Alasan -->
+    <div id="alasan" class="text-bg-light p-2">
+      <div class="container my-5">
+        <h2 class="text-center h1"><strong>Mengapa Sekolah Komunitas Kebon Maen?</strong></h2>
+        <div class="row m-2">
+          <div class="col-md-4">
+            <div class="card custom-card">
+              <img src="assets/images/8.png" class="card-img-top" alt="Student 1" />
+              <div class="card-body">
+                <h5 class="card-title text-center">Pengalaman Hakiki</h5>
+                <p class="card-text text-center">Sekolah yang menggunakan pengalaman hakiki dan kontekstual untuk membuat belajar menjadi bermakna</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card">
+              <img src="assets/images/7.png" class="card-img-top" alt="Student 2" />
+              <div class="card-body">
+                <h5 class="card-title text-center">Suasana Belajar yang Positif dan Suportif</h5>
+                <p class="card-text text-center">Guru-guru yang selalu memberikan dukungan dan motivasi kepada murid-murid untuk belajar dan berkembang</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card">
+              <img src="assets/images/6.png" class="card-img-top" alt="Student 3" />
+              <div class="card-body">
+                <h5 class="card-title text-center">Keterampilan Berpikir Kritis dan kreatif</h5>
+                <p class="card-text text-center">Siswa didorong untuk berpikir kritis, memecahkan masalah secara kreatif, dan menghasilkan ide-ide baru</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pilihan Jenjang -->
+    <div id="jenjang" class="text-bg-secondary-emphasis p-2">
+      <div class="container my-5">
+        <h2 class="text-center h1"><strong>Pilihan Kategori Jenjang</strong></h2>
+        <div class="row m-2">
+          <div class="col-md-6">
+            <div class="card custom-card text-center">
+              <img src="assets/images/pg-tk.png" class="card-img-top" alt="Student 1" />
+              <div class="card-body">
+                <h5 class="card-title text-center">KB/TK Kebon Maen</h5>
+                <p class="card-text text-center">Usia 3 - 4 Tahun</p>
+                <a class="btn btn-primary btn-lg" href="https://forms.gle/7YTB2s31Cje7ZHFR9" role="button">Daftar Sekarang</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card custom-card text-center">
+              <img src="assets/images/sd.png" class="card-img-top" alt="Student 2" />
+              <div class="card-body">
+                <h5 class="card-title text-center">SD Kebon Maen</h5>
+                <p class="card-text text-center">Kelas 1 - 6</p>
+                <a class="btn btn-primary btn-lg" href="https://forms.gle/Cu8L6Q1kLH2AvMnq5" role="button">Daftar Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visi dan Misi -->
+    <div class="text-bg-light p-2">
+      <div class="container my-5">
+        <h1 class="text-center"><strong>Visi</strong></h1>
+        <p class="tex-tcenter lead">
+          Menjadi Pusat Pendidikan (Education Centre) yang mempersiapkan semua komponen Sekolah (siswa, guru, staf, karyawan dan pengelola), Orang Tua Siswa, dan Masyarakat menjadi Manusia yang Mengenal Allah SWT, Rasulullah SAW, diri
+          sendiri dan lingkungannya agar menjadi Hamba Allah yang Berilmu, BerAmal Sholeh, Bermanfa'at bagi sesama, serta memiliki kompotesi yang relevan seiring perubahan zaman dalam kebersamaan di Negara Kesatuan Republik Indonesia
+        </p>
+        <br />
+        <h1 class="text-center"><strong>Misi</strong></h1>
+        <ol>
+          <li class="lead">Menyelenggarakan pendidikan yang berkualitas, bertanggungjawab dan produktif yang dengan percaya diri dapat menghadapi tantangan masa depan</li>
+          <li class="lead">Mengajarkan Nilai-nilai kebajikan dalam ISLAM dan menanamkan pentingnya identitas dan harga diri sebagai MUSLIM yang beradab</li>
+          <li class="lead">Menyiapkan anak memiliki berbagai keterampilan hidup untuk merencanakan Masa depannya</li>
+          <li class="lead">Merumuskan beragam cara untuk memberikan pengaruh secara positif terhadap setiap perubahan yang terjadi, mulai dari lingkungan terdekat (Keluarga), Negara bahkan Dunia</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- YT -->
+    <div class="text-bg-secondary-emphasis p-2">
+      <div class="container my-5">
+        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/Fxo_9JtfC5U?si=pFFFJiMLr2HXS8A3" title="YouTube video" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/QsiOG5DseMg?si=hjJ6UTHymhg3WWzQ" title="YouTube video" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/2btlOMcrsko?si=MYQvQWe383W89wvA" title="YouTube video" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Profil -->
+    <div class="text-bg-light p-2">
+      <div class="container my-5">
+        <h1 class="text-center"><strong>Profil</strong></h1>
+        <img src="assets/images/Kesadaran Bertuhan.png" alt="profil" class="img-fluid" />
+      </div>
+    </div>
+
+    <!-- Testimoni -->
+    <div class="text-bg-secondary-emphasis p-2">
+      <div class="container my-5">
+        <h1 class="text-center"><strong>Testimoni Siswa</strong></h1>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card custom-card">
+              <img src="assets/images/testimoni_pr.png" class="card-img-top" alt="Student 1" />
+              <div class="card-body">
+                <h5 class="card-title text-center">
+                  Fathonah Nur Azizah <br />
+                  <span class="text-secondary">Angkatan 2 (Lulus 2014)</span>
+                </h5>
+                <br />
+                <p class="card-text blockquote">
+                  <em
+                    >"Bismillah. Kebon maen sendiri adalah sekolah yang sangat sangat berbeda dgn sekolah pada umumnya. Dari segi konsep pelajaran sampai lingkungan sekolahnya. Maka dari itu yg didapat pun berbeda. Saya mendapat kesan
+                    tersendiri, yaitu dari lingkungan dan guru2nya. Belajar yg ga mesti di kelas terus menerus bikin saya dan teman teman ga gampang jenuh saat belajar, juga ngajarin kalau kita bisa belajar lewat kehidupan sehari-hari, apa
+                    yang kita lihat, kita dengar dan rasakan. Latih kita supaya bisa peka sama apa yg disekitar kita. Guru2 nya pun ga kalah menarik buat terus belajar dari beliau2. Yg paling diinget adalah ketika salah satu dari muridnya
+                    ada yg ngobrol saat pelajaran, maka akan ditegur dan apabila diulangi maka dapat konsekuensi yg mana kita buat sendiri. Dan itu bener2 melekat bgt dlm otak kalau semua perbuatan pasti harus dipertanggung jawabkan.
+                    Makanya sebelum kita ngelakuin segala sesuatu harus dipilah dulu apakah sesuai dgn t4 dan kondisi, apakah ini benar atau salah."</em
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card">
+              <img src="assets/images/testimoni_lk.png" class="card-img-top" alt="Student 2" />
+              <div class="card-body">
+                <h5 class="card-title text-center">
+                  Abdullah Azam <br />
+                  <span class="text-secondary">Angkatan 4 (Lulus 2016)</span>
+                </h5>
+                <br />
+                <p class="card-text blockquote">
+                  <em
+                    >"Senang rasanya pernah bersekolah di kebon maen, bertemu teman dan guru yg baik dan ramah. Yang paling berkesan di kebon maen adalah setiap tahunnya ada camping dan setiap bulannya selalu ada quran nite, itu kegiatan yg
+                    paling saya suka, karena kemungkinan kegiatan ini tdk ada di sekolah lain. pesan saya semoga sekolah SKKM bisa jauh lebih baik dan berkembang lagi di banding sebelum sebelumnya. <br />
+                    <br />salam saya Abdullah Azam Angkatan 4"</em
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card">
+              <img src="assets/images/testimoni_pr.png" class="card-img-top" alt="Student 3" />
+              <div class="card-body">
+                <h5 class="card-title text-center">
+                  Khansa Syahidah <br />
+                  <span class="text-secondary">Angkatan 6 (Lulus 2018)</span>
+                </h5>
+                <br />
+                <p class="card-text blockquote">
+                  <em
+                    >"Maasya Allah buat SKKM yg trs maju dgn sangat baik , barakallah.., untuk pesannya , semoga SKKM bisa menjadikan anak2 bangsa yg tertanam teguh dalam dirinya al quranul kariim , karna khansa pribadi jujur sangat miris,
+                    melihat pergaulan anak2 zaman sekarang yg kurang baik dgn bertambahnya zaman. <br /><br />
+                    Untuk kesannya banyak banget, dan semua itu kesan yg sangat positif ke khansa, mulai dri membuat peta masa depan , guru2 yg menghargai perasaan khansa (dn baru sadar skrng kalau dulu khansa orangnya keras kepala :") ) ,
+                    hingga terakhir Service Learning , intinya selama diSKKM semuanya berkesan , jazakumullahu khairan katsiran para guru2 , yg tak bisa disebutkan satu2 :)"</em
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+      <div class="container text-center">
+        <span class="footer-text">© 2024 Sekolah Komunitas Kebon Maen</span>
+        <div class="mt-2">
+          <a href="https://www.facebook.com/KEBONMAEN/?locale=id_ID" target="_blank"><i class="bi bi-facebook social-icon"></i></a>
+          <a href="https://www.instagram.com/kebonmaen/" target="_blank" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.youtube.com/channel/UCNeqSq8f5RX0K4stv6CxEhQ" target="_blank" class="social-icon"><i class="bi bi-youtube social-icon"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
